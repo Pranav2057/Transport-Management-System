@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner's Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <h2>Owner Dashboard</h2>
+    <p>Welcome, Owner! Here you can manage your fleet and vehicles.</p>
+
+    <h3>Insert Vehicle</h3>
+    <form id="insert-form">
+        <input type="text" id="vehicle_id" placeholder="vehicle ID" required>
+        <input type="text" id="vehicle_name" placeholder="Name of Vehicle" required>
+        <input type="text" id="no_plate" placeholder="No. Plate" required>
+        <input type="text" id="owner_name" placeholder="Name of Owner" required>
+        <select id="status" required>
+            <option value="transport">Transport</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="garage">Garage</option>
+        </select>
+        <button type="submit">Insert </button>
+        <button type="submit">Update </button>
+        <button type="submit">Delete </button>
+        <button type="submit">Display </button>
+    </form>
+
+    <h3>Vehicle List</h3>
+    <table id="vehicle-list">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Number plate</th>
+                <th>Owner</th>
+                <th>Condition</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Vehicle data will be displayed here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="server.js"></script>
+</body>
+</html>
